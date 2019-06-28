@@ -1,0 +1,34 @@
+//https://www.hackerrank.com/challenges/bon-appetit/problem
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main()
+{
+    int n,k,b;
+    cin>>n>>k;
+    int a[100000];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    cin>>b;
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        if(i!=k)
+        {
+            sum=sum+a[i];
+        }
+    }
+    sum=sum/2;
+    if(sum==b)
+    {
+        cout<<"Bon Appetit ";
+    }
+    else
+    {
+        cout<<abs(b-sum);
+
+    }
+    return 0;
+}
