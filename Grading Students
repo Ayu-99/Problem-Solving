@@ -1,0 +1,44 @@
+//! bin/usr/env cpp
+#include<iostream>
+using  namespace std;
+#include<bits/stdc++.h>
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+    cin>>a[i];
+    }
+     int b[n];
+     for(int i=0;i<n;i++)
+     {
+         if(a[i]>=38)
+         {
+             int c=a[i];
+             int d=int(c/5)+1;
+             int e=d*5;
+             if(e-a[i]<3)
+             {
+                 b[i]=e;
+             }
+             else
+             {
+                b[i]=a[i];
+             }
+         }
+         else
+         {
+             b[i]=a[i];
+         }
+     }
+    //miniMaxSum(arr,n);
+    for(int i=0;i<n;i++)
+    {
+        cout<<b[i]<<endl;
+    }
+    return 0;
+}
