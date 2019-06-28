@@ -1,0 +1,31 @@
+#!/bin/usr/env python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the viralAdvertising function below.
+def viralAdvertising(n):
+    shared=5
+    liked=2
+    sumOfLikes=2 
+    for _ in range(1,n):
+        shared = liked*3
+        liked=int((shared)/2)
+        sumOfLikes = sumOfLikes+liked
+        
+
+    return sumOfLikes
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    result = viralAdvertising(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
