@@ -1,0 +1,44 @@
+#!/bin/usr/env python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the findDigits function below.
+def findDigits(n):
+    l=[]
+    y=n
+
+    while n!=0:
+        
+        rem=n%10
+        if rem==0:
+            n=n/10
+            continue
+        if y%rem==0:
+            l.append(rem)
+            n=int(n/10)
+            continue
+
+        else:
+            n=int(n/10)  
+            continue  
+
+    return len(l)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        n = int(input())
+
+        result = findDigits(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
