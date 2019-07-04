@@ -1,4 +1,3 @@
-#Problem URL->https://www.hackerrank.com/challenges/circular-array-rotation/problem
 #!/bin/usr/env python
 
 import math
