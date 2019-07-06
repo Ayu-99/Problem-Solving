@@ -1,0 +1,18 @@
+#!/bin/usr/env python
+
+import sys
+
+
+n = int(input().strip())
+c = [int(x) for x in input().strip().split(' ')]
+
+jump = 0
+i = 0
+while i < n-1:
+    if i+2<n and c[i+2] == 0:
+        i = i+2
+        jump += 1
+    else:
+        i = i+1
+        jump += 1
+print(jump)
