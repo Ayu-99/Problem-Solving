@@ -1,0 +1,42 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the superReducedString function below.
+def superReducedString(S):
+
+    LS = list(S)
+    i = 0 
+    while i < len(LS)-1:
+        if LS[i]==LS[i+1]:
+            del LS[i]
+            del LS[i]
+            i = 0
+            if len(LS) == 0:
+                return 'Empty String'
+                break
+        else:
+            i+=1
+    return ''.join(LS)
+
+   
+   
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = superReducedString(s)
+
+    # ztqoauhjmxbpykwlvfide
+
+
+    fptr.write(result + '\n')
+    # acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj
+
+    fptr.close()
